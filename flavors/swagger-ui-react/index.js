@@ -32,6 +32,8 @@ export default class SwaggerUI extends React.Component {
   }
 
   render() {
+    // SSR check
+    if (typeof window === 'undefined') return null
     return this.SwaggerUIComponent ? <this.SwaggerUIComponent /> : null
   }
 
